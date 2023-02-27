@@ -248,6 +248,8 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 	{ TERMMOD,              XK_K,           kscrollup,      {.i = 3} },
 	{ TERMMOD,              XK_J,           kscrolldown,    {.i = 3} },
+	{ ControlMask,          XK_equal,       zoom,           {.f = +1} },
+	{ ControlMask,          XK_minus,       zoom,           {.f = -1} },
 	{ TERMMOD,              XK_O,           externalpipe,   EXPIPE("st-copyout -p 2") },
 	{ TERMMOD,              XK_I,           externalpipe,   EXPIPE("st-urlhandler -c") },
 };
