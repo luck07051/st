@@ -225,6 +225,8 @@ static MouseShortcut mshortcuts[] = {
 	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
 };
 
+#include <X11/XF86keysym.h>
+
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
 #define TERMMOD (ControlMask|ShiftMask)
@@ -252,6 +254,9 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_minus,       zoom,           {.f = -1} },
 	{ TERMMOD,              XK_O,           externalpipe,   EXPIPE("st-copyout -p 2") },
 	{ TERMMOD,              XK_I,           externalpipe,   EXPIPE("st-urlhandler -c") },
+
+	{ XK_ANY_MOD,           XF86XK_Copy,    clipcopy,       {.i =  0} },
+	{ XK_ANY_MOD,           XF86XK_Paste,   clippaste,      {.i =  0} },
 };
 
 /*
